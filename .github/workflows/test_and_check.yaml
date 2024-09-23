@@ -1,0 +1,32 @@
+name: Check and Test
+on:
+  push:
+    tags:
+      - 'v*'
+    branches:
+      - master
+      - main
+jobs:
+  check_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Set up Python Env
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install deps
+        run: |
+          pip install pip --upgrade -q
+          pip install -q .
+          pip install -q -r requirements/check.txt
+          pip install -q -r requirements/test.txt
+          pip install safety
+      - name: Static Checker
+        run: make check
+      - name: Test with pytest
+        run: make test
+      - name: Run Safety vulnerability scanner on deps
+        run: safety check --full-report > safety_report.txt

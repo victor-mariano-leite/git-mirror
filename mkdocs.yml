@@ -1,0 +1,30 @@
+site_name: "git-mirror"
+theme:
+  name: "material"
+  palette:
+    scheme: slate
+  features:
+    - toc.integrate
+plugins:
+  - search
+  - mkdocstrings
+  - autorefs
+  - techdocs-core
+  - section-index
+  - gen-files:
+      scripts:
+        - docs/gen_ref_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+nav:
+  - Home: README.md
+  - Code Reference: reference/
+  - Changelog: CHANGELOG.md
+
+watch:
+  - git-mirror

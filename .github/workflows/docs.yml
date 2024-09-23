@@ -1,0 +1,32 @@
+name: Publish TechDocs Site
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  publish-techdocs-site:
+    runs-on: ubuntu-latest
+
+    env:
+      DOCS_DIR: docs
+      DOCS_BUILD_DIR: docs/build
+      
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - uses: actions/setup-python@v2
+
+      - name: Install deps
+        run: |
+          pip install -q .
+          pip install -q -r requirements/docs.txt
+
+      - name: Install techdocs-cli
+        run: npm install -g @techdocs/cli --registry=https://registry.npmjs.org/
+
+      - name: Generate docs site
+        run: techdocs-cli generate --verbose --no-docker
+
+      - name: Publish docs site
+        run: techdocs-cli publish

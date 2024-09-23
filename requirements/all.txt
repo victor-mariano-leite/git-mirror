@@ -1,0 +1,4 @@
+-r build.txt
+-r check.txt
+-r test.txt
+-r docs.txt

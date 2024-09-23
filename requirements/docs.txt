@@ -1,0 +1,5 @@
+mkdocstrings-python==0.*
+mkdocs-techdocs-core==1.*
+mkdocs-gen-files==0.*
+mkdocs-literate-nav==0.*
+mkdocs-section-index==0.*
