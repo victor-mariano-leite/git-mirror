@@ -35,7 +35,7 @@ git-mirror is a powerful, flexible, and efficient Python library designed to sea
 You can install git-mirror using pip:
 
 ```bash
-pip install git-mirror
+pip install git-file-mirror
 ```
 
 Ensure you have Python 3.7 or higher installed.
@@ -44,7 +44,7 @@ Ensure you have Python 3.7 or higher installed.
 
 1. Install git-mirror:
    ```bash
-   pip install git-mirror
+   pip install git-file-mirror
    ```
 
 2. Create a configuration file `config.ini`:
