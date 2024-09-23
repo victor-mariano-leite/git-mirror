@@ -1,9 +1,9 @@
 # git-mirror
 
-![GitHub stars](https://img.shields.io/github/stars/yourusername/git-mirror?style=social)
+![GitHub stars](https://img.shields.io/github/stars/victor-mariano-leite/git-mirror?style=social)
 ![PyPI version](https://img.shields.io/pypi/v/git-mirror.svg)
 ![Python versions](https://img.shields.io/pypi/pyversions/git-mirror.svg)
-![License](https://img.shields.io/github/license/yourusername/git-mirror.svg)
+![License](https://img.shields.io/github/license/victor-mariano-leite/git-mirror.svg)
 
 git-mirror is a powerful, flexible, and efficient Python library designed to seamlessly synchronize file trees with Git repositories. Whether you're managing documentation, code bases, or any directory structure, git-mirror provides a robust solution for keeping your Git repositories up-to-date with local file systems.
 
@@ -162,4 +162,4 @@ git-mirror is released under the MIT License. See the [LICENSE](LICENSE) file fo
 
 ---
 
-git-mirror is maintained by [Your Name/Organization]. If you encounter any issues or have questions, please [open an issue](https://github.com/yourusername/git-mirror/issues) on GitHub.
+git-mirror is maintained by [victor-mariano-leite]. If you encounter any issues or have questions, please [open an issue](https://github.com/victor-mariano-leite/git-mirror/issues) on GitHub.
